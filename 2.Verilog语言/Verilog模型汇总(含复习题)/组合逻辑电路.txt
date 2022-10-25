@@ -1,0 +1,81 @@
+/****三人表决电路****/
+module JG3(ABC,X,Y);
+	//input Port(s)   //A具有一票否决权，Y为全票否决时置1
+	input [2:0] ABC;
+	//output Port(s)
+	output X, Y;
+	reg X;
+	//Additional Module Item(s)
+	always@(ABC)
+    begin
+      case(ABC)
+        3'b000 : X<=0;
+        3'b001 : X<=0;
+        3'b010 : X<=0;
+        3'b011 : X<=0;
+        3'b100 : X<=0;
+        3'b101 : X<=1;
+        3'b110 : X<=1;
+        3'b111 : X<=1;
+      endcase
+    end
+    assign Y=(~ABC[0])&(~ABC[1])&(~ABC[2]);
+endmodule
+
+
+/**** 2 选 1 多路选择器****/
+module mux21(a,b,s,y);//实现当选择信号S为0时选中a，为1时选中b;
+	input a,b,s;
+	output y;
+	reg y;
+	always @(a,b,s)
+        y <= (s==0)?a:b;
+endmodule
+
+/**** 半加器 ****/
+module hadder_test(a,b,cout,sum); //完成一位半加器功能
+input a,b;
+output cout,sum;
+assign {cout,sum}=a+b;
+endmodule
+
+
+/**** 全加器 ****/
+module fadder_test(a,b,ci,s,co);//完成一位全加器功能，考虑进位的加法器模块 
+input a,b,ci;
+output s,co;
+assign {co,s}=a+b+ci;
+endmodule
+
+
+/**** 显示译码器 ****/
+module decl7s_test(a,led7s);//完成7段数码显示译码器显示
+      input [3:0] a;
+      output [6:0] led7s;
+      reg [6:0] led7s;
+always @(a)
+begin
+  case(a)
+    4'b0000 : led7s[6:0]=7'b0111111;
+    4'b0001 : led7s[6:0]=7'b0000110;    
+    4'b0010 : led7s[6:0]=7'b1011011;
+    4'b0011 : led7s[6:0]=7'b1001111;
+    4'b0100 : led7s[6:0]=7'b1100110;
+    4'b0101 : led7s[6:0]=7'b1101101;
+    4'b0110 : led7s[6:0]=7'b1111101;
+    4'b0111 : led7s[6:0]=7'b0000111;
+    4'b1000 : led7s[6:0]=7'b1111111;
+    4'b1001 : led7s[6:0]=7'b1101111;
+    4'b1010 : led7s[6:0]=7'b1110111;
+    4'b1011 : led7s[6:0]=7'b1111100;
+    4'b1100 : led7s[6:0]=7'b0111001;
+    4'b1101 : led7s[6:0]=7'b1011110;
+    4'b1110 : led7s[6:0]=7'b1111001;
+    4'b1111 : led7s[6:0]=7'b1110001;
+  endcase
+end
+endmodule
+
+
+
+       

@@ -1,0 +1,176 @@
+/******** 计数器 ********/
+module count_test(en,clk,clr,cout,outy);//完成16进制计数器功能
+input en,clk,clr;
+output [3:0]outy;
+output cout;
+reg [3:0]outy;
+always @ (posedge clk or posedge clr)
+begin 
+    if(clr) outy<=4'b0000;
+    else if(en)
+           begin if(outy==4'b1111)  outy<=4'b0000;
+                else outy<=outy+1'b1;
+           end
+   end
+  assign cout=((outy==4'b1111)&en)?1:0;
+endmodule
+
+/******** 位移寄存器 ********/
+module shift_test(din,s,srsi,slsi,clk,clr,dout); //完成 8 位双向移位寄存器功能
+  input[7:0] din;
+  input[1:0] s;
+  input srsi,slsi,clk,clr;
+  output [7:0] dout;
+  reg [7:0] dout; 
+always@(posedge clk or negedge clr)
+begin
+  if(clr==0) dout<= 8'b00000000;
+  else if(s==2'b01)
+  begin
+  dout[0]<=dout[1];
+  dout[1]<=dout[2];
+  dout[2]<=dout[3];
+  dout[3]<=dout[4];
+  dout[4]<=dout[5];
+  dout[5]<=dout[6];
+  dout[6]<=dout[7];
+  dout[7]<=srsi;
+  end
+  else if(s==2'b10)
+  begin
+  dout[0]<=slsi;
+  dout[1]<=dout[0];
+  dout[2]<=dout[1];
+  dout[3]<=dout[2];
+  dout[4]<=dout[3];
+  dout[5]<=dout[4];
+  dout[6]<=dout[5];
+  dout[7]<=dout[6];
+  end
+  else if(s==2'b11) dout=din;
+end
+endmodule
+
+/******** 6位十进制计数器 ********/
+module counter6bit_test(ENA,CLR,F_IN,Q); //完成6位十进制计数器
+    input ENA;
+    input CLR;
+    input F_IN;
+    output [23:0] Q;  
+    reg [23:0] Q;
+    reg F_OUT;
+    always @(posedge F_IN)
+    begin
+    if(CLR==1) Q[23:0]<=0;
+    else if(ENA==1)
+    begin
+      if(Q[3:0]==9)
+      begin
+        Q[3:0]<=0;
+        if(Q[7:4]==9)
+        begin
+          Q[7:4]<=0;
+          if(Q[11:8]==9)
+          begin
+          Q[11:8]<=0;
+            if(Q[15:12]==9)
+            begin
+            Q[15:12]<=0;
+              if(Q[19:16]==9)
+              begin
+               Q[19:16]<=0;
+               if(Q[23:20]==9)  Q[23:20]<=0;
+               else Q[23:20]<=Q[23:20]+1;
+              end
+              else Q[19:16]<=Q[19:16]+1;
+            end
+            else Q[15:12]<=Q[15:12]+1;
+          end
+          else Q[11:8]<=Q[11:8]+1;
+        end
+        else Q[7:4]<=Q[7:4]+1; 
+      end
+      else Q[3:0]<=Q[3:0]+1;
+    end
+    end
+  endmodule
+
+/******** 24位寄存器 ********/
+module latch24_test( d, clk,q );
+input [23:0]d;
+input clk;
+output [23:0]q;
+reg [23:0]q;
+always @(posedge clk)
+begin
+  q<=d;
+end
+endmodule
+
+/******** 4位寄存器 ********/
+module dff4_test(d,clk,clrn,q); //完成4位寄存器逻辑功能
+input [3:0]d;
+input clk,clrn;
+output reg [3:0]q;
+always @(posedge clk,clrn)
+begin
+if(~clrn) q[3:0]<=4'b0000;
+else q<=d;
+end
+endmodule
+
+/******** 序列检测器 ********/
+module detected_test(ds,setd,clk,clrn,dc,c);//完成序列检测器
+ input ds,clk,clrn; 
+ input [7:0] setd;
+ output reg [3:0] c;  
+ output  dc;
+always@ (posedge clk,clrn)
+begin
+if(~clrn) c<=4'b0000;
+else
+begin
+ case(c)
+    4'b0000: begin
+      if(ds==1) c<=4'b0001;
+      else c<=4'b0000;
+    end
+    4'b0001: begin
+      if(ds==0) c<=4'b0010;
+      else c<=4'b0000;
+    end
+    4'b0010: begin
+      if(ds==1) c<=4'b0011;
+      else c<=4'b0000;
+    end
+    4'b0011: begin
+      if(ds==1) c<=4'b0100;
+      else c<=4'b0000;
+    end
+    4'b0100: begin
+      if(ds==1) c<=4'b0101;
+      else c<=4'b0000;
+    end
+    4'b0101: begin
+      if(ds==0) c<=4'b0110;
+      else c<=4'b0000;
+    end
+    4'b0110: begin
+      if(ds==0) c<=4'b0111;
+      else c<=4'b0000;
+    end
+    4'b0111: begin
+      if(ds==1) c<=4'b1000;
+      else c<=4'b0000;
+    end
+    4'b1000: begin
+      if(ds==1) c<=4'b0000;
+      else c<=4'b0000;
+    end
+  endcase
+end
+end
+assign dc=(c==4'b1000)?1:0;
+endmodule
+
+

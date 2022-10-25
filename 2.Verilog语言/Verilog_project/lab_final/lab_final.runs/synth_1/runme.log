@@ -1,0 +1,436 @@
+
+*** Running vivado
+    with args -log show.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source show.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source show.tcl -notrace
+Command: synth_design -top show -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3516 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 362.609 ; gain = 101.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'show' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/Show.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:3]
+	Parameter N bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:3]
+INFO: [Synth 8-6157] synthesizing module 'show_numbers' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:58]
+INFO: [Synth 8-6157] synthesizing module 'decoder_4to16' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_4to16' (2#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'show_numbers' (3#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v:58]
+INFO: [Synth 8-6157] synthesizing module 'fsm_controller' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/FSM.v:4]
+	Parameter START bound to: 4'b1000 
+	Parameter COMPUTE_SUM bound to: 4'b0100 
+	Parameter GET_NEXT bound to: 4'b0010 
+	Parameter DONE bound to: 4'b0001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/FSM.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_controller' (4#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/FSM.v:4]
+INFO: [Synth 8-6157] synthesizing module 'data_path_top' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:2]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:32]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (5#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:32]
+WARNING: [Synth 8-350] instance 'A1' of module 'full_adder' requires 4 connections, but only 3 given [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:17]
+WARNING: [Synth 8-350] instance 'A2' of module 'full_adder' requires 4 connections, but only 3 given [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:18]
+INFO: [Synth 8-6157] synthesizing module 'latch' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:59]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'latch' (6#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:59]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:40]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (7#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:40]
+WARNING: [Synth 8-350] instance 'C1' of module 'comparator' requires 5 connections, but only 3 given [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:23]
+INFO: [Synth 8-6157] synthesizing module 'selector_2_to_1' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:50]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'selector_2_to_1' (8#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:50]
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:75]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'ram_initial.mem' is read successfully [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (9#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'data_path_top' (10#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'show' (11#1) [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/Show.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 419.258 ; gain = 157.816
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 419.258 ; gain = 157.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 419.258 ; gain = 157.816
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/constrs_1/new/lab_final_ddr.xdc]
+Finished Parsing XDC File [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/constrs_1/new/lab_final_ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/constrs_1/new/lab_final_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/show_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/show_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 762.285 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 762.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 762.285 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 762.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'AN_reg' in module 'show_numbers'
+INFO: [Synth 8-5546] ROM "AN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsm_controller'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                         11111110
+                 iSTATE1 |                              001 |                         11111101
+                 iSTATE2 |                              010 |                         11111011
+                 iSTATE3 |                              011 |                         11110111
+                 iSTATE4 |                              100 |                         11101111
+                 iSTATE5 |                              101 |                         11011111
+                 iSTATE6 |                              110 |                         10111111
+                  iSTATE |                              111 |                         01111111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AN_reg' using encoding 'sequential' in module 'show_numbers'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                   START |                             1000 |                             1000
+             COMPUTE_SUM |                             0100 |                             0100
+                GET_NEXT |                             0010 |                             0010
+                    DONE |                             0001 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module show_numbers 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+Module fsm_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module full_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+Module latch 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module selector_2_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ram 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'FSM1/output_value_reg[3]' (FDRE) to 'FSM1/output_value_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FSM1/output_value_reg[5]' (FDRE) to 'FSM1/output_value_reg[1]'
+INFO: [Synth 8-3886] merging instance 'FSM1/output_value_reg[4]' (FDRE) to 'FSM1/state_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SHOW/tube_now_reg[7] )
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[31]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[30]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[29]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[28]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[27]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[26]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[25]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[24]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[23]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[22]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[21]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[20]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[19]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[18]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[17]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[16]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[15]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[14]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[13]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[12]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[11]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[10]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[9]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[8]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[7]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[6]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[5]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[4]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[3]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'DST1/L2/q_reg[2]' (FDRE) to 'DST1/L2/q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DST1/L2/q_reg[0] )
+INFO: [Synth 8-3886] merging instance 'SHOW/SEG_reg[7]' (FD) to 'SHOW/tube_now_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SHOW/tube_now_reg[7] )
+INFO: [Synth 8-3886] merging instance 'FSM1/state_reg[0]' (FDRE) to 'FSM1/output_value_reg[0]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 762.285 ; gain = 500.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'FSM1/output_value_reg[1]' (FDRE) to 'FSM1/state_reg[2]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     2|
+|4     |LUT2   |    35|
+|5     |LUT3   |    11|
+|6     |LUT4   |    29|
+|7     |LUT5   |     3|
+|8     |LUT6   |    41|
+|9     |FDRE   |    86|
+|10    |FDSE   |     1|
+|11    |IBUF   |     3|
+|12    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+---------------+------+
+|      |Instance   |Module         |Cells |
++------+-----------+---------------+------+
+|1     |top        |               |   246|
+|2     |  DST1     |data_path_top  |    95|
+|3     |    L1     |latch          |    95|
+|4     |  Divider1 |divider        |    50|
+|5     |  FSM1     |fsm_controller |    51|
+|6     |  SHOW     |show_numbers   |    28|
++------+-----------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 775.156 ; gain = 170.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 775.156 ; gain = 513.715
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 775.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+84 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 775.445 ; gain = 526.891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 775.445 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.runs/synth_1/show.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file show_utilization_synth.rpt -pb show_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  2 21:00:53 2021...

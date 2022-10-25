@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/FSM.v,1622637293,verilog,,C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v,,fsm_controller,,,,,,,,
+C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/Show.v,1622638810,verilog,,,,show,,,,,,,,
+C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/datapath.v,1622637343,verilog,,C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v,,comparator;data_path_top;full_adder;latch;ram;selector_2_to_1,,,,,,,,
+C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/others.v,1622637514,verilog,,C:/Users/12204/Desktop/Verilog_project/lab_final/lab_final.srcs/sources_1/new/Show.v,,decoder_4to16;divider;show_numbers,,,,,,,,

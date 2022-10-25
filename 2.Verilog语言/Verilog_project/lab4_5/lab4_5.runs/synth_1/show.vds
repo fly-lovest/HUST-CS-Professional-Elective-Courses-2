@@ -1,0 +1,654 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jun  3 09:21:37 2021
+# Process ID: 8460
+# Current directory: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1
+# Command line: vivado.exe -log show.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source show.tcl
+# Log file: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/show.vds
+# Journal file: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source show.tcl -notrace
+Command: synth_design -top show -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25584 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 362.309 ; gain = 100.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'show' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/show.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:3]
+	Parameter N bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:3]
+INFO: [Synth 8-6157] synthesizing module 'divider__parameterized0' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:3]
+	Parameter N bound to: 200000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider__parameterized0' (1#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:3]
+INFO: [Synth 8-6157] synthesizing module 'show_numbers' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:50]
+INFO: [Synth 8-6157] synthesizing module 'decoder_4to16' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_4to16' (2#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'show_numbers' (3#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v:50]
+INFO: [Synth 8-6157] synthesizing module 'autocount' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v:22]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:22]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:86]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:99]
+WARNING: [Synth 8-567] referenced signal 'we' should be on the sensitivity list [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:102]
+WARNING: [Synth 8-567] referenced signal 'data' should be on the sensitivity list [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:102]
+WARNING: [Synth 8-567] referenced signal 'write_addr' should be on the sensitivity list [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:102]
+WARNING: [Synth 8-567] referenced signal 'ram' should be on the sensitivity list [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (4#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:86]
+WARNING: [Synth 8-689] width (32) of port connection 'read_addr' does not match port width (4) of module 'ram' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:41]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adder' (5#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:41]
+INFO: [Synth 8-6157] synthesizing module 'mux_21' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:63]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21' (6#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:63]
+INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:73]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (7#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:73]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:52]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (8#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (9#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:22]
+INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v:23]
+	Parameter START bound to: 0 - type: integer 
+	Parameter COMPUTE_SUM bound to: 1 - type: integer 
+	Parameter GET_NEXT bound to: 2 - type: integer 
+	Parameter DONE bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (10#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'autocount' (11#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'show' (12#1) [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/show.v:23]
+WARNING: [Synth 8-3331] design ram has unconnected port clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 418.410 ; gain = 156.875
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 418.410 ; gain = 156.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 418.410 ; gain = 156.875
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'test'. [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/show_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/show_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 751.926 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 751.926 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 751.926 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 751.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 751.926 ; gain = 490.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 751.926 ; gain = 490.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 751.926 ; gain = 490.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'AN_reg' in module 'show_numbers'
+INFO: [Synth 8-5546] ROM "AN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ram_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'FSM'
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sum_sel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ld_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ld_sum" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StateNext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                         11111110
+                 iSTATE1 |                              001 |                         11111101
+                 iSTATE2 |                              010 |                         11111011
+                 iSTATE3 |                              011 |                         11110111
+                 iSTATE4 |                              100 |                         11101111
+                 iSTATE5 |                              101 |                         11011111
+                 iSTATE6 |                              110 |                         10111111
+                  iSTATE |                              111 |                         01111111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AN_reg' using encoding 'sequential' in module 'show_numbers'
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[15]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[14]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[13]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[12]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[11]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[10]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[9]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[8]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[7]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[6]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[5]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[4]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[3]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[2]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[1]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_reg[0]' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:104]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   START |                             0001 |                               00
+             COMPUTE_SUM |                             0010 |                               01
+                GET_NEXT |                             0100 |                               10
+                    DONE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 751.926 ; gain = 490.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module show_numbers 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+Module ram 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 16    
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+Module mux_21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'SHOW1/tube_now_reg[0]' (FD) to 'SHOW1/tube_now_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SHOW1/tube_now_reg[1]' (FD) to 'SHOW1/tube_now_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SHOW1/tube_now_reg[2] )
+INFO: [Synth 8-3886] merging instance 'SHOW1/tube_now_reg[3]' (FD) to 'SHOW1/tube_now_reg[4]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SHOW1/tube_now_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[13][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[12][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[11][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[10][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[9][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[8][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[7][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[6][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[5][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[4][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[3][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[2][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[1][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[15][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\auto1/datapath_ins/ram_ins/ram_reg[14][26] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'SHOW1/SEG_reg[0]' (FD) to 'SHOW1/SEG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SHOW1/SEG_reg[1]' (FD) to 'SHOW1/SEG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'SHOW1/SEG_reg[2]' (FD) to 'SHOW1/tube_now_reg[2]'
+INFO: [Synth 8-3886] merging instance 'SHOW1/SEG_reg[3]' (FD) to 'SHOW1/SEG_reg[4]'
+INFO: [Synth 8-3886] merging instance 'SHOW1/SEG_reg[7]' (FD) to 'SHOW1/tube_now_reg[7]'
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][31]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][30]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][29]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][28]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][27]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][26]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][25]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][24]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][23]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][22]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][21]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][20]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][19]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][18]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][17]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][16]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][15]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][14]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][13]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][12]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][11]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][10]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][9]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][8]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][7]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][6]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][5]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][4]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][3]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][2]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][1]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[15][0]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][31]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][30]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][29]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][28]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][27]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][26]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][25]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][24]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][23]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][22]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][21]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][20]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][19]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][18]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][17]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][16]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][15]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][14]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][13]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][12]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][11]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][10]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][9]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][8]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][7]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][6]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][5]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][4]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][3]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][2]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][1]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[14][0]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][31]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][30]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][29]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][28]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][27]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][26]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][25]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][24]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][23]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][22]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][21]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][20]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][19]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][18]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][17]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][16]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][15]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][14]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][13]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][12]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][11]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][10]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][9]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][8]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][7]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][6]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][5]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][4]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][3]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][2]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][1]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[13][0]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[12][31]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[12][30]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[12][29]) is unused and will be removed from module show.
+WARNING: [Synth 8-3332] Sequential element (auto1/datapath_ins/ram_ins/ram_reg[12][28]) is unused and will be removed from module show.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 751.926 ; gain = 490.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 755.457 ; gain = 493.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 755.531 ; gain = 493.996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     3|
+|4     |LUT2   |     5|
+|5     |LUT3   |    15|
+|6     |LUT4   |     4|
+|7     |LUT5   |     3|
+|8     |LUT6   |    10|
+|9     |FDRE   |    78|
+|10    |FDSE   |     1|
+|11    |IBUF   |     3|
+|12    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+------------------------+------+
+|      |Instance    |Module                  |Cells |
++------+------------+------------------------+------+
+|1     |top         |                        |   172|
+|2     |  Divider1  |divider                 |    60|
+|3     |  Divider2  |divider__parameterized0 |    61|
+|4     |  SHOW1     |show_numbers            |    23|
+|5     |  auto1     |autocount               |     7|
+|6     |    FSM_ins |FSM                     |     7|
++------+------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 528 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 765.867 ; gain = 170.816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 765.867 ; gain = 504.332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 780.707 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+174 Infos, 124 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 780.707 ; gain = 532.316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 780.707 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/show.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file show_utilization_synth.rpt -pb show_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  3 09:22:12 2021...

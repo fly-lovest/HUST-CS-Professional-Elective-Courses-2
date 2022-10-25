@@ -1,0 +1,94 @@
+/******全加法设计，数据为1位*********/
+module fa_behavioral(a,b,ci,s,co);//考虑进位加法器模块 
+       input a,b;
+       input ci;
+       output  s;
+       output co;
+assign s=a^b^ci;
+assign co=(a&b)|(a&ci)|(b&ci);
+endmodule
+
+/*******无符号二进制数加法器*********/
+module adder(a,b,cin,cout,sum);   // 完成8位的无符号二进制加法器
+  parameter bit_width=8;
+  output[bit_width-1:0] sum;
+  output cout;
+  input [bit_width-1:0] a,b;
+  input cin;
+assign {cout,sum}=a+b+cin;
+endmodule
+
+/*******无符号二进制数减法器*********/
+module substractor(a,b,cin,cout,sum); // 8位无符号数减法器
+  parameter bit_width=8;
+  output[bit_width-1:0] sum;
+  output cout;
+  input [bit_width-1:0] a,b;
+  input cin;//carry
+assign {cout,sum}=a-b-cin;
+endmodule
+
+/*******定点二进制数的补码加减法运算器*********/
+module add_sub(a,b,control,cout,overflow,sum);
+  parameter bit_width=4;
+  output[bit_width-1:0] sum;     output cout,overflow;
+  input [bit_width-1:0] a,b;     input control;//carry
+  reg overflow,cout;
+  reg [bit_width-1:0] sum;
+  reg [bit_width:0] a2,b2,sum2;
+
+always @(a,b,control)
+    begin
+       a2[bit_width]=a[bit_width-1];    //将a符号位扩展成2位并赋值给a2
+       a2[bit_width-1:0]=a[bit_width-1:0];
+       b2[bit_width]=b[bit_width-1];   //将b符号位扩展成2位并赋值给b2
+       b2[bit_width-1:0]=b[bit_width-1:0];
+
+    if (control==0) {cout,sum2}=a2+b2;
+    else  {cout,sum2}=a2+(~b2)+control; 
+    if((sum2[bit_width]^sum2[bit_width-1])==1)   overflow=1;    
+    else overflow=0;   //用双符号位判溢出
+     sum[bit_width-1:0]=sum2[bit_width-1:0];   
+  end           
+endmodule
+
+
+/*******输入输出均为高电平有效的3位二进制优先编码器*********/
+module encoder8_3_test(I,Y); //I[7]的优先权最高，I[0]的优先权最低
+input [7:0] I;
+output reg [2:0] Y;
+always @(I)
+if(I[7]) Y[2:0]<=3'b111;
+else if(I[6]&&~I[7]) Y[2:0]<=3'b110;
+else if(I[5]&&~I[6]&&~I[7]) Y[2:0]<=3'b101;
+else if(I[4]&&~I[5]&&~I[6]&&~I[7]) Y[2:0]<=3'b100;
+else if(I[3]&&~I[4]&&~I[5]&&~I[6]&&~I[7]) Y[2:0]<=3'b011;
+else if(I[2]&&~I[3]&&~I[4]&&~I[5]&&~I[6]&&~I[7]) Y[2:0]<=3'b010;
+else if(I[1]&&~I[2]&&~I[3]&&~I[4]&&~I[5]&&~I[6]&&~I[7]) Y[2:0]<=3'b001;
+else Y[2:0]<=3'b000;
+endmodule
+
+/*******具有一位使能端的3线-8线译码器*********/
+module decoder3e_test(a,ena,y); //当使能端为0时，8位输出信号全为0；如果一位使能信号为1,则输出高电平有效的译码信号
+  input [2:0] a;
+  input ena;
+  output reg [7:0] y; 
+always @(ena,a)
+begin
+if(!ena) y[7:0]<=8'b0000_0000;
+else
+begin
+  case(a)
+    3'b000 : y[7:0]<= 8'b0000_0001;
+    3'b001 : y[7:0]<= 8'b0000_0010;
+    3'b010 : y[7:0]<= 8'b0000_0100;
+    3'b011 : y[7:0]<= 8'b0000_1000;
+    3'b100 : y[7:0]<= 8'b0001_0000;
+    3'b101 : y[7:0]<= 8'b0010_0000;
+    3'b110 : y[7:0]<= 8'b0100_0000;
+    3'b111 : y[7:0]<= 8'b1000_0000;
+    endcase
+end
+end
+endmodule
+

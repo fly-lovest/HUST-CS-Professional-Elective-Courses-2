@@ -1,0 +1,1030 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jun  2 21:04:21 2021
+# Process ID: 15184
+# Current directory: C:/Users/12204/Desktop/Verilog_project/lab4_5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6220 C:\Users\12204\Desktop\Verilog_project\lab4_5\lab4_5.xpr
+# Log file: C:/Users/12204/Desktop/Verilog_project/lab4_5/vivado.log
+# Journal file: C:/Users/12204/Desktop/Verilog_project/lab4_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 719.379 ; gain = 107.313
+update_compile_order -fileset sources_1
+file mkdir C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1
+file mkdir C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new
+close [ open C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc w ]
+add_files -fileset constrs_1 C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/constrs_1/new/lab4_5_ddr.xdc
+close [ open C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/show.v w ]
+add_files C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/show.v
+close [ open C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v w ]
+add_files C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v
+update_compile_order -fileset sources_1
+set_property top show [current_fileset]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:13:19 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 21:13:19 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+add_files -norecurse C:/Users/12204/Desktop/Verilog_project/lab_final/ram_initial.mem
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:20:19 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 21:20:19 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:24:56 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 21:24:56 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:27:47 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:30:24 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 21:30:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1792.910 ; gain = 26.398
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1804.332 ; gain = 4.688
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 21:37:59 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 21:37:59 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Jun  2 21:43:52 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1903.035 ; gain = 9.199
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/frequence.v w ]
+add_files -fileset sim_1 C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/frequence.v
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/frequence.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/frequence.v
+file delete -force C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/frequence.v
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module show_numbers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'frequency' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v:28]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1958.438 ; gain = 9.113
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 22:02:44 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 22:02:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module show_numbers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2176.590 ; gain = 7.039
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module show_numbers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.divider(N=50)
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2176.590 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'autocount_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim/ram_initial.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj autocount_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module show_numbers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 397a43f326ed4058afc9d7ae1591dbe5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot autocount_tb_behav xil_defaultlib.autocount_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'read_addr' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:30]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:31]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'c_in' [C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram(DATA_WIDTH=32,ADDR_WIDTH=4)
+Compiling module xil_defaultlib.adder(WIDTH=32)
+Compiling module xil_defaultlib.mux_21(WIDTH=32)
+Compiling module xil_defaultlib.register(WIDTH=32)
+Compiling module xil_defaultlib.comparator(WIDTH=32)
+Compiling module xil_defaultlib.datapath(DATA_WIDTH=32,ADDR_WIDT...
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.autocount
+Compiling module xil_defaultlib.divider(N=1)
+Compiling module xil_defaultlib.autocount_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot autocount_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "autocount_tb_behav -key {Behavioral:sim_1:Functional:autocount_tb} -tclbatch {autocount_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source autocount_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'autocount_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2176.590 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:05:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:05:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:15:17 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:15:17 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:19:43 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:19:43 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:22:28 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Jun  2 23:25:45 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:29:04 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:29:04 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Jun  2 23:34:10 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:42:56 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:42:56 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E600A
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/show.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Jun  2 23:49:27 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Wed Jun  2 23:49:27 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log
+close_project
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.hw/webtalk/labtool_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 82.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun  3 00:06:22 2021...
+close_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2885.664 ; gain = 0.000
+open_project C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Jun  3 09:21:34 2021] Launched synth_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/synth_1/runme.log
+[Thu Jun  3 09:21:34 2021] Launched impl_1...
+Run output will be captured here: C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.runs/impl_1/runme.log

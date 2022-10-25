@@ -1,0 +1,161 @@
+/********3位的全加器*********/
+module test1( 
+    input [2:0] a, b,
+    input cin,
+    output cout,
+    output [2:0] sum
+);	
+assign {cout,sum}=a+b+cin;
+endmodule
+
+/********4位的计数器*********/
+module test2( 
+    input clk,
+	input rst,
+	input start,
+    input up,
+    output reg [3:0] counter_out
+);
+always@ (posedge clk)
+begin
+if(rst==1) counter_out<=4'b0000;
+else if(start==1)
+begin
+  if(up==1) counter_out<=counter_out+1;
+  else counter_out<=counter_out-1;
+end
+end
+endmodule
+
+
+
+/********FSM有限状态机*********/
+module test3(    //输入信号w控制状态的转移，各状态下的输出为z
+    input clk,
+	input reset,
+	input w,
+	output [2:0] state,
+	output [2:0] next_state,
+    output z
+);
+reg [2:0] state,next_state;
+reg z;
+localparam A = 3'b000, B = 3'b001, C = 3'b010, D = 3'b011, E = 3'b100, F = 3'b101;
+
+initial begin
+z<=0;
+next_state<=0;
+end
+
+always@ (state,w) begin
+case(state)
+  A:begin
+  z<=0;
+  if(w==1) next_state<=A;
+  else next_state<=B;
+  end
+  B:begin
+  z<=0;
+  if(w==1) next_state<=D;
+  else next_state<=C;  
+  end
+  C:begin
+  z<=0;
+  if(w==1) next_state<=D;
+  else next_state<=E;
+  end
+  D:begin
+  z<=0;
+  if(w==1) next_state<=A;
+  else next_state<=F;  
+  end
+  E:begin
+  z<=1;
+  if(w==1) next_state<=D;
+  else next_state<=E;   
+  end
+  F:begin
+  z<=1;
+  if(w==1) next_state<=D;
+  else next_state<=C;   
+  end
+endcase
+end
+    always @(posedge clk) begin
+        if (reset == 1) 
+            state <= A;
+        else
+            state <= next_state;
+    end
+endmodule
+
+
+/********一个复杂的计数器*********/
+/*设计构建一个功能较为复杂的计数器。该计数器有一个1位的数据输入端口，
+在检测到特定的输入模式（“1101”）时启动减“1”计数，“1101”序列模式后
+面紧跟的4位（高位在前，低位在后，即紧跟“1101”序列模式后的第1位是计
+数时间的最高位）作为计数器的计数持续时间；计数器计数期间计数指示信
+号输出有效；计数器计数完成后输出一个计数完成信号，同时等待输入确认；
+一旦输入确认后，计数器重新开始检查“1101”序列，从而重复开始上述过程*/
+module test4( 
+    input clk,
+    input reset,      // Synchronous reset
+    input data,
+    output reg [3:0] count,
+    output reg counting,
+    output reg done,
+    input ack 
+);
+	parameter A = 2'b00;
+	parameter B = 2'b01;
+	parameter C = 2'b10;
+	parameter D = 2'b11;
+
+    reg id;
+    reg [3:0] seq;
+    reg [4:0] init;
+    reg [1:0] state;
+
+
+    always @(negedge clk) begin
+        done = id;
+        case (state)
+            A: begin
+                counting = 0;
+                count = 0;
+                id = 0;
+                seq = seq<<1|data;
+                if (seq==13) begin
+                    init = 1;
+                    state = B;
+                end
+            end
+            B: begin
+                init = init<<1|data;
+                if (init&16) state = C;
+            end
+            C: begin
+                if (!counting) begin
+                    count = init&15;
+                    counting = 1;
+                end else begin
+                    count -= 1;
+                    if (!count) begin
+                        state = D;
+                    end
+                end
+            end
+            D: begin
+                counting = 0;
+                id = 1;
+                if (ack) state = A;
+            end
+        endcase
+
+        if (reset) begin
+            state = A;
+            id = 0;
+            seq = 0;
+        end
+    end
+endmodule

@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/auto_count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/data_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sources_1/new/others.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module show_numbers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12204/Desktop/Verilog_project/lab4_5/lab4_5.srcs/sim_1/new/autocount_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module autocount_tb

@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab4_5.srcs/sources_1/new/FSM.v" \
+"../../../../lab4_5.srcs/sources_1/new/auto_count.v" \
+"../../../../lab4_5.srcs/sources_1/new/data_path.v" \
+"../../../../lab4_5.srcs/sources_1/new/others.v" \
+"../../../../lab4_5.srcs/sim_1/new/autocount_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
